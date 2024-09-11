@@ -19,5 +19,5 @@ async def extract_text(file: UploadFile = File(...)):
     img = Image.open(BytesIO(image_bytes))
     
     extracted_text = extract_text_from_image(img)
-    print(extracted_text)
+    print(f"Here is the extracted text:{extracted_text}")
     return {"text": extracted_text}
